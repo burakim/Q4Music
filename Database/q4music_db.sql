@@ -441,51 +441,15 @@ CREATE TABLE IF NOT EXISTS `Users` (
 --
 
 INSERT INTO `Users` (`ObjectId`, `Username`, `Password`, `EMail`, `FullName`, `Gender`, `UserType`, `IsApproved`, `IsActive`, `Deleted`) VALUES
-(28, 'calisan', '7c222fb2927d828af22f592134e8932480637c0d', 'adasd@dasda.com', 'calisan örnek3', NULL, 'user', b'1', b'1', b'0'),
 (32, 'test1', '4e1517bf2695d4b9ce33f2426782ae6f5cc10ba3', 'bs@aa.com', 'burak', NULL, 'user', b'1', b'1', b'0'),
-(34, 'alagacc', 'a415ab5cc17c8c093c015ccdb7e552aee7911aa4', 'cerenalagac@hotmail.com', 'Ceren Ala?aç', NULL, 'user', b'1', b'1', b'0'),
-(35, 'burak', 'da7169592c4847350b7262ccf9f7b41b72c9d0be', 'burak@burak.com', 'burak', NULL, 'user', b'1', b'1', b'0'),
 (37, 'a', '86f7e437faa5a7fce15d1ddcb9eaeaea377667b8', 'a@a.com', 'a', NULL, 'user', b'1', b'1', b'0'),
 (38, 's', 'a0f1490a20d0211c997b44bc357e1972deab8ae3', 's@d.com', 's', NULL, 'user', b'1', b'1', b'0'),
 (39, 'asdd', '0e747aaa0f03a7b7bb9a964f47fe7c508be7b086', 'asdd@asd.co', 'asdd', NULL, 'user', b'1', b'1', b'0'),
 (41, 'denemee', 'dd0b73cc6963eca9e284737bce54529f43d9d488', 'deneme@dene.com', 'denemee', NULL, 'user', b'1', b'1', b'0'),
 (43, 'asd', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'a@a.c', 'asd', NULL, 'user', b'1', b'1', b'0'),
 (44, 'n', '356a192b7913b04c54574d18c28d46e6395428ab', '1@gma.com', '1', NULL, 'user', b'1', b'1', b'0'),
-(52, 'admin', '95c25d903b08651b295072ba2419c3b70a42ee40', 'admin@admin.com', 'Admin', b'1', 'admin', b'1', b'1', b'0'),
-(53, 'eeee', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'ddddd@hotmail.com', 'dddd ffffff', NULL, 'user', b'1', b'1', b'0'),
-(54, 'q', '22ea1c649c82946aa6e479e1ffd321e4a318b1b0', 'q@q.co', 'Admin', NULL, 'admin', b'1', b'1', b'0'),
-(55, 'w', 'aff024fe4ab0fece4091de044c58c9ae4233383a', 'w@w.co', 'User', NULL, 'user', b'1', b'1', b'0'),
-(56, 'dene', '87b23d7d2083cf997c029824d43b13dba949bded', 'dene@dene.co', 'dene', b'0', 'user', b'1', b'1', b'0'),
-(57, 'aaaa', '8cb2237d0679ca88db6464eac60da96345513964', 'AA@AA.com', 'dasa', b'1', 'user', b'0', b'1', b'0'),
-(58, 'Deneme123', '8c6020afed12b762818931171d4c28c016b05492', 'jxceldogm@gmail.com', 'b', b'1', 'user', b'1', b'1', b'0'),
-(59, 'ss', '388ad1c312a488ee9e12998fe097f2258fa8d5ee', 'aa@tt.com', 'aa', b'1', 'user', b'1', b'1', b'0'),
-(60, 'Xerox', 'e677158c11661acbfb9e665da8699db94a645f39', 'a@b.com', 'Xerox', b'1', 'user', b'1', b'1', b'0'),
-(63, 'deneme', 'd88ea461adab9a5d6d2d760f82bbd6b1ba81452e', 'asdasd@a.com', 'sadas asd', b'1', 'user', b'1', b'1', b'0'),
-(64, 'emreuser', '427e9052dbbe1e157dc0c12e4b87412ef71003c3', 'emreuser2@test.com', 'emre user', b'1', 'user', b'1', b'1', b'0'),
-(65, 'emreadmin', '89726b3ff406b7f007a129d98100cb6e00c5887e', 'emreuser3@test.com', 'emre admin', b'1', 'admin', b'1', b'1', b'0'),
-(66, 'muziksever', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'abc@abc.com', 'unkown unknown', b'1', 'user', b'1', b'1', b'0'),
-(67, 'sedcft', '013d35025bba540f93f53d3c1ae72f422136a8c7', 'kutayhek@gmail.com', 'Kutay', b'1', 'user', b'1', b'0', b'0'),
-(68, 'fads', 'b1b3773a05c0ed0176787a4f1574ff0075f7521e', 'dasdas@das.com', 'asdasd', b'0', 'user', b'1', b'1', b'0'),
-(69, 'dasda', 'b1b3773a05c0ed0176787a4f1574ff0075f7521e', 'dasda@ada.com', 'adsda', b'0', 'user', b'0', b'0', b'0'),
-(70, 'emretest', 'd3960938025e8f1f7fd4b1bafdaf76a15a210203', 'emteda@dfand.com', 'emre test', b'1', 'user', b'1', b'1', b'0'),
-(71, 'emrequiz', '38a30d1e0bae9d2d5e512e3d3cb60421afc86f6c', 'emr2euser3@test.com', 'emre quiz', b'1', 'user', b'1', b'1', b'0'),
-(72, 'LebronJames', '90d24ae93fb9bb5bf283ab6842583733afc1ce4d', 'fucicek23@gmail.com', 'LeBron James', b'1', 'user', b'1', b'1', b'0'),
-(73, 'burakim', '4e1517bf2695d4b9ce33f2426782ae6f5cc10ba3', 'h.burakyesilyurt@gmail.com', 'Burak Yesilyurt', b'1', 'user', b'1', b'1', b'0'),
-(74, 'test58', '90f57a31a6d3510b5c1dc03daa8bada626d298d5', 'saas@sada.com', 'qwert', b'1', 'user', b'1', b'1', b'0'),
-(75, 'semih', '4e1517bf2695d4b9ce33f2426782ae6f5cc10ba3', 'semih@semih.com', 'Semih Tuzun', b'1', 'user', b'1', b'1', b'0'),
-(76, 'veli', 'b42a6d93d796915222f6ffb2ffdd6137d93c1cdb', 'ali@veli.com', 'ali veli', b'1', 'user', b'1', b'1', b'0'),
-(77, 'erginer', '4abd5f002091d3b08f3f63603ef08aa9346f23e3', 'erginere@itu.edu.tr', 'Emre Erginer', b'1', 'user', b'1', b'1', b'0'),
-(78, 'ggbbggbb', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', 'ggbb@mynet.com', 'gg bb', b'1', 'user', b'1', b'1', b'0'),
-(79, 'ibrahim', 'b098bc9ecb7ad7d4a3f084fc12ed0aa7eb10dcc4', 'ibrahimdolapci0909@gmail.com', '?brahim DOLAPC?', b'1', 'user', b'1', b'1', b'0'),
-(80, 'qq', '7b52009b64fd0a2a49e6d8a939753077792b0554', 'yy@gmail.com', 'aa', b'1', 'user', b'1', b'1', b'0'),
-(81, 'Melih', '8cb2237d0679ca88db6464eac60da96345513964', 'melih@melih.com', 'Melih Yesilyurt', b'1', 'user', b'1', b'1', b'0'),
-(82, 'BurakMac', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'burakmac@mac.com', 'BurakMac', b'1', 'user', b'1', b'1', b'0'),
-(83, 'ernsnl', 'fa259675628c4d2c3593614538f945e2d2ea0807', 'ernsnl@gmail.com', 'ERen Senel', b'1', 'user', b'1', b'1', b'0'),
-(84, 'cml', '3041039f6a18ebbf592e13815cd88aeb803784c0', 'asdml@sdf.com', 'Cumali Türkmeno?lu', b'1', 'user', b'1', b'1', b'0'),
-(85, 'outter', '6216f8a75fd5bb3d5f22b6f9958cdede3fc086c2', 'rujlekesi68@hotmail.com', 'xxx', b'1', 'user', b'1', b'1', b'0'),
-(86, 'serefemre', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'serefemre@seref.com', 'seref emre', b'1', 'user', b'1', b'1', b'0'),
-(87, 'nagehan', '8cb2237d0679ca88db6464eac60da96345513964', 'nagehan@nagehan.com', 'nagehan ilhan', b'1', 'user', b'1', b'1', b'0'),
-(88, 'cml2', 'cf87ea075b6317a88e190a456d37bf015d7aa3e6', 'turkmenogluc@gmail.com', 'Cumali asdfasdf', b'1', 'user', b'1', b'1', b'0');
+(52, 'admin', '95c25d903b08651b295072ba2419c3b70a42ee40', 'admin@admin.com', 'Admin', b'1', 'admin', b'1', b'1', b'0');
+
 
 -- --------------------------------------------------------
 
