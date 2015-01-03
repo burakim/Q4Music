@@ -1,0 +1,223 @@
+<wicket:head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>Q4Music</title>
+
+	<script type="text/javascript" src="MyCodes.js"></script>
+	<!--=== CSS ===-->
+
+	<!-- Bootstrap -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"
+		type="text/css" />
+
+	<!-- jQuery UI -->
+	<!--<link href="plugins/jquery-ui/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />-->
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery.ui.1.10.2.ie.css"/>
+	<![endif]-->
+
+	<!-- Theme -->
+	<link href="assets/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet"
+		href="assets/css/fontawesome/font-awesome.min.css">
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="assets/css/fontawesome/font-awesome-ie7.min.css">
+	<![endif]-->
+
+	<!--[if IE 8]>
+		<link href="assets/css/ie8.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<link
+		href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700'
+		rel='stylesheet' type='text/css'>
+
+	<!--=== JavaScript ===-->
+
+	<script type="text/javascript"
+		src="assets/js/libs/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript"
+		src="plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="assets/js/libs/lodash.compat.min.js"></script>
+
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="assets/js/libs/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- Smartphone Touch Events -->
+	<script type="text/javascript"
+		src="plugins/touchpunch/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript"
+		src="plugins/event.swipe/jquery.event.move.js"></script>
+	<script type="text/javascript"
+		src="plugins/event.swipe/jquery.event.swipe.js"></script>
+
+	<!-- General -->
+	<script type="text/javascript" src="assets/js/libs/breakpoints.js"></script>
+	<script type="text/javascript" src="plugins/respond/respond.min.js"></script>
+	<!-- Polyfill for min/max-width CSS3 Media Queries (only for IE8) -->
+	<script type="text/javascript"
+		src="plugins/cookie/jquery.cookie.min.js"></script>
+	<script type="text/javascript"
+		src="plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript"
+		src="plugins/slimscroll/jquery.slimscroll.horizontal.min.js"></script>
+
+	<!-- App -->
+	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script type="text/javascript" src="assets/js/plugins.js"></script>
+	<script type="text/javascript"
+		src="assets/js/plugins.form-components.js"></script>
+
+	<!-- BURADAN SONRASI PAGE SPECIFIC -->
+
+	<script type="text/javascript"
+		src="plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+
+	<!-- Page specific plugins -->
+	<!-- Charts -->
+
+	<script type="text/javascript"
+		src="plugins/sparkline/jquery.sparkline.min.js"></script>
+
+	<script type="text/javascript"
+		src="plugins/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript"
+		src="plugins/daterangepicker/daterangepicker.js"></script>
+	<script type="text/javascript"
+		src="plugins/blockui/jquery.blockUI.min.js"></script>
+
+	<!-- Pickers -->
+	<script type="text/javascript" src="plugins/pickadate/picker.js"></script>
+	<script type="text/javascript" src="plugins/pickadate/picker.date.js"></script>
+	<script type="text/javascript" src="plugins/pickadate/picker.time.js"></script>
+	<script type="text/javascript"
+		src="plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+
+	<!-- Noty -->
+	<script type="text/javascript" src="plugins/noty/jquery.noty.js"></script>
+	<script type="text/javascript" src="plugins/noty/layouts/top.js"></script>
+	<script type="text/javascript" src="plugins/noty/themes/default.js"></script>
+
+	<!-- Slim Progress Bars -->
+	<script type="text/javascript" src="plugins/nprogress/nprogress.js"></script>
+
+	<!-- Bootbox -->
+	<script type="text/javascript" src="plugins/bootbox/bootbox.min.js"></script>
+
+	<!-- Forms -->
+	<script type="text/javascript"
+		src="plugins/uniform/jquery.uniform.min.js"></script>
+	<script type="text/javascript" src="plugins/select2/select2.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			"use strict";
+
+			App.init(); // Init layout and core plugins
+			Plugins.init(); // Init all plugins
+			FormComponents.init(); // Init all form-specific plugins
+
+		});
+	</script>
+
+	<!-- Demo JS -->
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<script type="text/javascript" src="assets/js/demo/pages_calendar.js"></script>
+	<script type="text/javascript"
+		src="assets/js/demo/charts/chart_filled_blue.js"></script>
+	<script type="text/javascript"
+		src="assets/js/demo/charts/chart_simple.js"></script>
+	<script type="text/javascript" src="assets/js/demo/ui_general.js"></script>
+
+</wicket:head>
+
+<wicket:panel>
+	<!-- Header -->
+	<header class="header navbar navbar-fixed-top" role="banner">
+		<!-- Top Navigation Bar -->
+		<div class="container">
+			<!-- Logo -->
+			<a wicked:id="AnsayfaLogo" class="navbar-brand" href=""> <img
+				src="assets/img/logo.png" alt="logo" /> Q<strong>4</strong>Music
+			</a>
+			<!-- /logo -->
+			<!-- Sidebar Toggler -->
+			<a href="#" class="toggle-sidebar bs-tooltip" data-placement="bottom"
+				data-original-title="Toggle navigation"> <i class="icon-reorder"></i>
+			</a>
+
+
+			<!-- /Sidebar Toggler -->
+			<!-- Top Left Menu -->
+
+			<ul class="nav navbar-nav navbar-left hidden-xs hidden-sm">
+				<li style="border-right: 0; border-left: 1 solid #000; height: 48px">
+					<a href="#"> </a>
+				</li>
+
+			</ul>
+			<!-- /Top Left Menu -->
+			<!-- Top Right Menu -->
+			<ul class="nav navbar-nav navbar-right">
+				<!-- Notifications -->
+
+				<!-- Project Switcher Button -->
+				<li class="dropdown"><a href="#"
+					class="project-switcher-btn dropdown-toggle"> <i
+						class="icon-folder-open"></i> <span>Statistics</span>
+				</a></li>
+				<!-- User Login Dropdown -->
+				<li class="dropdown user"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown"> <!--<img alt="" src="assets/img/avatar1_small.jpg" />-->
+						<i class="icon-male"></i> <span wicket:id="LoginedUsername"
+						class="username">Emre Teoman</span> <i
+						class="icon-caret-down small"></i>
+				</a>
+					<ul class="dropdown-menu">
+						<li><a wicket:id="lnkMyProfile"
+							href="pages_user_profile.html"><i class="icon-wrench"></i> My
+								Profile</a></li>
+						<li><a wicket:id="myStatistics" href="#"><i
+								class="icon-tasks"></i> My Statistics</a></li>
+						<li class="divider"></li>
+						<li><a wicket:id="logout"><i class="icon-key"></i> Log
+								Out</a></li>
+					</ul></li>
+				<!-- /user login dropdown -->
+			</ul>
+			<!-- /Top Right Menu -->
+		</div>
+		<!-- /top navigation bar -->
+		<!-- BU KISMA KADAR ÜST MENÜ BAR YER ALMAKTADIR VE SADELEŞTİRİLMİŞTİR -->
+		<!--=== Project Switcher ===-->
+		<div id="project-switcher" class="container project-switcher">
+			<div id="scrollbar">
+				<div class="handle"></div>
+			</div>
+			<div id="frame">
+				<ul class="project-list">
+					<!-- 					<li><a href="javascript:void(0);"> <span class="image">500</span> <span class="title">Test-1</span> -->
+					<!-- 					</a></li> -->
+					<!-- 					<li><a href="javascript:void(0);"> <span class="image">300</span> <span class="title">Test-2</span> -->
+					<!-- 					</a></li> -->
+					<!-- 					<li><a href="javascript:void(0);"> <span class="image">200</span> <span class="title">Test-3</span> -->
+					<!-- 					</a></li> -->
+					<li wicket:id="repeater"><div wicket:id="scorelist"></div></li>
+				</ul>
+			</div>
+			<!-- /#frame -->
+		</div>
+		<!-- /#project-switcher -->
+		<!-- PROJECT SWİTCHER İÇERİK KISMI BURADAYDI -->
+	</header>
+
+</wicket:panel>

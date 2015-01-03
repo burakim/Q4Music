@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head><wicket:head></wicket:head>
+</head>
+<body class="theme-dark">
+<div wicket:id="panel1">
+</div> 
+<div id="container">
+<div id="sidebar" class="sidebar-fixed" wicket:id="panel2">
+</div>
+<div id="content">
+            <div class="container">
+                <!-- NAV�GAT�ON !!! -->
+                <!-- Breadcrumbs line -->
+              
+                              
+                                <br>
+                                <br>
+                                <br>
+                 
+                <div class="crumbs">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li>
+                            <i class="icon-home"></i>
+                            <a href="index.html">Q4Music</a>
+                        </li>
+                        <li class="current">
+                            <a href="pages_calendar.html" title="">Quiz</a>
+                        </li>
+                    </ul>                 
+                </div>
+                <!-- /Breadcrumbs line -->
+                <!--=== Page Header ===-->
+                 <br>
+                 <div class="widget box" wicket:id="opponentinfobox">
+							<div class="widget-header">
+								<h4><i class="icon-reorder"></i> Your Friends Score</h4>
+							</div>
+							<div class="widget-content align-center">
+								
+							<h2 wicket:id="opponentscore"></h2>
+								
+								
+							</div>
+						</div>
+						 <br>
+                                <div class="row">
+					<div class="col-md-12">
+						<h5 class="widget-title"><i class=" icon-question"></i> Questions</h5>
+					</div>
+				</div>
+                               
+                                
+                               
+                
+      <div class="tabbable tabbable-custom tabs-right">
+   
+      <ul  class="nav nav-tabs tabs-right">
+    <li wicket:id = "maddeler"> </li>
+      </ul>
+      		  <div class="tab-content">
+      											<div wicket:id="repeater" >
+      											<div wicket:id="questionask-panel" >
+      											</div>
+      											</div>
+      </div>
+     
+     
+     
+      </div>
+    <!--   Buton saga alinacak UNUTMA!-->
+    <form wicket:id="form">
+    <button wicket:id="answersendbttn"  class="btn btn-success" data-loading-text="Loading..." data-complete-text="Your Answers Sent!" >Send My Answers</button>
+    </form>
+  
+                <!-- /Page Header -->
+                <!--=== Page Content ===-->
+                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!All of your content must be in here!!!!!!!!!!!!!!!!!!!!! -->
+                <!-- /Page Content -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+</div>
+</body>
+</html>

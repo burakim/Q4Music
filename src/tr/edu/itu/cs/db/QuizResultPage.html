@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.oorg">
+<head><wicket:head></wicket:head>
+</head>
+<body class="theme-dark">
+<div wicket:id="panel1">
+</div> 
+<div id="container">
+<div id="sidebar" class="sidebar-fixed" wicket:id="panel2">
+</div>
+<div id="content">
+            <div class="container">
+                <!-- NAV�GAT�ON !!! -->
+                <!-- Breadcrumbs line -->
+                <div class="crumbs">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li>
+                            <i class="icon-home"></i>
+                            <a href="index.html">Q4Music</a>
+                        </li>
+                        <li class="current">
+                            <a href="pages_calendar.html" title="">Quiz Result</a>
+                        </li>
+                    </ul>                 
+                </div>
+                <!-- /Breadcrumbs line -->
+                <!--=== Page Header ===-->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h3 wicket:id="userscore">Quiz Sonuclariniz</h3>
+                        <br>
+						<h4 wicket:id="usercorrectanswer">Quiz Sonuclariniz</h4>
+                                                <br>
+                                                <h4 wicket:id="userwronganswer">Quiz Sonuclariniz</h4>
+                                                <br>
+                                                <h3>Your Mistakes</h3>
+                                                <h4 wicket:id="usermistakes">Quiz Sonuclariniz</h4>
+                        
+                        
+                       <br>
+                       <br>
+                         
+                         <div class="panel panel-default">
+										<div class="panel-heading">
+											<h3 class="panel-title">
+											<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+											Hey Challenge Your Friend !! </a>
+											</h3>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse" style="height: auto;">
+											<div class="panel-body">
+											
+												<form wicket:id="Form_Send_Email"
+										class="form-horizontal row-border" id="validate-1" action="#">
+										<div class="form-group">
+											<label class="col-md-3 control-label">Your Friend Name</label>
+											<div class="col-md-9">
+												<input  id="email_area_name" wicket:id="tb_Email_area_name" type="text"
+													name="email_area_name" class="form-control">
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Your Friend Email</label>
+											<div class="col-md-9">
+												<input  id="email_area" wicket:id="tb_Email_area" type="text"
+													name="email_area" class="form-control">
+											</div>
+										</div>
+
+										
+											<div class="modal-footer">
+										
+										<input id="btnSendEmail"
+											wicket:id="sendemailbttn" type="submit"
+											class="btn btn-primary" value="Send Challenge Request" />
+									</div>
+									</form>
+									
+									
+											</div>
+										</div>
+									</div>
+                       
+                    </div>                   
+                </div>
+                <!-- /Page Header -->
+                <!--=== Page Content ===-->
+                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!All of your content must be in here!!!!!!!!!!!!!!!!!!!!! -->
+                <!-- /Page Content -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+</div>
+</body>
+</html>

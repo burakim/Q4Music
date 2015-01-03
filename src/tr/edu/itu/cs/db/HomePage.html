@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.oorg">
+<head>
+<wicket:head></wicket:head>
+</head>
+<body class="theme-dark">
+	<div wicket:id="panel1"></div>
+	<div id="container">
+		<div id="sidebar" class="sidebar-fixed" wicket:id="panel2"></div>
+		<div id="content">
+			<div class="container">
+				<!-- NAVİGATİON !!! -->
+				<!-- Breadcrumbs line -->
+				<div class="crumbs">
+					<ul id="breadcrumbs" class="breadcrumb">
+						<li><i class="icon-home"></i> <a wicket:id="HomePageLink" href="">Q4Music</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /Breadcrumbs line -->
+				<!--=== Page Header ===-->
+				<div class="page-header">
+					<div class="page-title">
+						<h3>HomePage</h3>
+						<span wicket:id="WelcomeMsg"></span>
+					</div>
+				</div>
+				<!-- /Page Header -->
+				<!--=== Page Content ===-->
+				<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!All of your content must be in here!!!!!!!!!!!!!!!!!!!!! -->
+				<img src="/assets/img/logo_no_words.png" alt="Music" width="40%"
+					height="30%">
+				<div class="col-sm-6 col-md-3">
+					<div class="statbox widget box box-shadow">
+						<div class="widget-content">
+							<div class="visual cyan">
+								<img src="/assets/img/star_music.png" alt="Music" width="70"
+									height="77">
+							</div>
+							<div class="value">If you are eager to get the points</div>
+							<a class="more" wicket:id="linkQuestions"><b>Click here
+									for the Quizes!</b> <i class="pull-right icon-angle-right"></i> </a>
+						</div>
+					</div>
+					<!-- /.smallstat -->
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="statbox widget box box-shadow">
+						<div class="widget-content">
+							<div class="visual cyan">
+								<img src="/assets/img/folder_music.png" alt="Music" width="70"
+									height="77">
+							</div>
+							<div class="value">Or you can improve yourself here</div>
+							<a class="more" wicket:id="linkArchiveSongs"><b>Click here
+									for the archive!</b><i class="pull-right icon-angle-right"></i></a>
+						</div>
+					</div>
+					<!-- /.smallstat -->
+				</div>
+<div wicket:id=successinfo class="alert alert-success fade in">
+										<i class="icon-remove close" data-dismiss="alert"></i>
+										Your Request successful sent your friend!
+									</div>
+				<!-- /Page Content -->
+			</div>
+			<!-- /.container -->
+		</div>
+
+	</div>
+</body>
+</html>

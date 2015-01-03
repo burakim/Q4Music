@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.oorg">
+<head><wicket:head></wicket:head>
+</head>
+<body class="theme-dark">
+<div wicket:id="panel1">
+</div> 
+<div id="container">
+<div id="sidebar" class="sidebar-fixed" wicket:id="panel2">
+</div>
+<div id="content">
+            <div class="container">
+                <!-- NAV�GAT�ON !!! -->
+                <!-- Breadcrumbs line -->
+                <div class="crumbs">
+                    <ul id="breadcrumbs" class="breadcrumb">
+                        <li>
+                            <i class="icon-home"></i>
+                            <a href="index.html">Q4Music</a>
+                        </li>
+                        <li class="current">
+                            <a href="pages_calendar.html" title="">Select Category To Start Quiz</a>
+                        </li>
+                    </ul>                 
+                </div>
+                <!-- /Breadcrumbs line -->
+                <!--=== Page Header ===-->
+                <div class="page-header">
+                    <div class="page-title">
+                        <h3>To Start Quiz Application Select Subject by Choosing Categories </h3>
+                        
+                    </div>                   
+                </div>
+                <!-- /Page Header -->
+                <!--=== Page Content ===-->
+               <div class="row">
+              <div class="col-md-12">
+              <div class="widget-content">
+                <div class="row">
+<div wicket:id="repeater" class="col-md-2"   >
+					<!--=== General Buttons ===-->
+					<div wicket:id="categories" class="widget box">
+					<!-- /General Buttons -->
+				</div>
+				
+				</div>
+				</div>
+				</div>
+				</div>
+				 </div>
+				 <div wicket:id="warnmessage" class="alert alert-info fade in">
+										<i class="icon-remove close" data-dismiss="alert"></i>
+										Upps! There is no questions at this category. Please try another category.
+									</div>
+                <!-- /Page Content -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+
+</div>
+</body>
+</html>

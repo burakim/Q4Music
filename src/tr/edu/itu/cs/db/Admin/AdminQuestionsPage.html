@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.oorg">
+<head>
+<wicket:head></wicket:head>
+
+<!-- DataTables -->
+<script type="text/javascript"
+	src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript"
+	src="plugins/datatables/tabletools/TableTools.min.js"></script>
+<!-- optional -->
+<script type="text/javascript"
+	src="plugins/datatables/colvis/ColVis.min.js"></script>
+<!-- optional -->
+<script type="text/javascript"
+	src="plugins/datatables/columnfilter/jquery.dataTables.columnFilter.js"></script>
+<!-- optional -->
+<script type="text/javascript" src="plugins/datatables/DT_bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/demo/ui_general.js"></script>
+
+</head>
+<body class="theme-dark">
+	<div wicket:id="panel1"></div>
+	<div id="container">
+		<div id="sidebar" class="sidebar-fixed" wicket:id="panel2"></div>
+		<div id="content">
+			<div class="container">
+				<!-- NAV�GAT�ON !!! -->
+				<!-- Breadcrumbs line -->
+				<div class="crumbs">
+					<ul id="breadcrumbs" class="breadcrumb">
+						<li><i class="icon-home"></i> <a href="index.html">Q4Music</a>
+						</li>
+						<li class="current"><a href="pages_calendar.html" title="">Question Managment</a></li>
+					</ul>
+					<ul class="crumb-buttons">
+						<li class="dropdown"><a href="#" title=""
+							data-toggle="dropdown"><i class="icon-tasks"></i><span>Questions
+									<strong><span wicket:id="questioncount">(+3)</span></strong>
+							</span><i class="icon-angle-down left-padding"></i></a>
+							<ul class="dropdown-menu pull-right">
+								<li><a id="AddNewQuestion" href="" title=""><i
+										class="icon-plus"></i>Add new Question</a></li>
+							</ul></li>
+					</ul>
+				</div>
+				<!-- /Breadcrumbs line -->
+				<!--=== Page Header ===-->
+				<div class="page-header">
+					<div class="page-title">
+						<h3>Question Management</h3>
+						<span>You can add, delete, edit questions.</span>
+					</div>
+				</div>
+				<!-- /Page Header -->
+				<!--=== Page Content ===-->
+				<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!All of your content must be in here!!!!!!!!!!!!!!!!!!!!! -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget box">
+							<div class="widget-header">
+								<h4>
+									<i class="icon-reorder"></i> Question Table
+								</h4>
+								<div class="toolbar no-padding">
+									<div class="btn-group">
+										<span class="btn btn-xs widget-collapse"><i
+											class="icon-angle-down"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="widget-content">
+								<table
+									class="table table-striped table-bordered table-hover table-checkable datatable">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Question</th>
+											<th>Correct Answer</th>
+											<th>Positive Score</th>
+											<th>Negative Score</th>
+											<th>Category</th>
+											<th>Operations</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr wicket:id="questiontablerow">
+											<td><span wicket:id="tdID">TEST</span></td>
+											<td><span wicket:id="tdQuestionText">TEST</span></td>
+											<td><span wicket:id="tdCorrectChoice">TEST</span></td>
+											<td><span wicket:id="tdPositiveScore">TEST</span></td>
+											<td><span wicket:id="tdNegativeScore">TEST</span></td>
+											<td><span wicket:id="tdCategory">TEST</span></td>
+											<td class="align-center">
+												<ul class="table-controls">
+													<li><a id="link_edit" wicket:id="tdEdit" href=""
+														class="bs-tooltip" title="Edit"><i class="icon-pencil"></i></a>
+													</li>
+													<li><a id="link_delete" wicket:id="tdDelete" href=""
+														class="bs-tooltip" title="Delete"
+														onclick="return confirm('Are you sure to delete ?')"><i
+															class="icon-trash"></i></a></li>
+												</ul>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="modal fade" id="myModal1">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<form wicket:id="Form_Details"
+									class="form-horizontal row-border" id="validate-1" action="#">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"
+											aria-hidden="true">&times;</button>
+										<h4 class="modal-title">Edit page</h4>
+									</div>
+									<div class="modal-body">
+										<div class="form-group">
+											<label class="col-md-3 control-label">Question Id</label>
+											<div class="col-md-9">
+												<input id="objectid" type="text" name="id"
+													class="form-control" disabled /> <input
+													style="display: none;" id="objectidhidden"
+													wicket:id="tb_QuestionId" type="text" name="idhidden"
+													class="form-control" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-3 control-label">Question<span
+												class="required">*</span></label>
+											<div class="col-md-9">
+												<input id="questiontext" wicket:id="tb_QuestionText" type="text"
+													name="questiontext" class="form-control required">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-3 control-label">Correct Choice<span
+												class="required">*</span></label>
+											<div class="col-md-9">
+												
+													
+													<label class="radio-inline"><input id="correctchoice1"
+													type="radio" value="choice1" name="correctchoice" class="required" />1th Choice
+												</label> 
+												<label class="radio-inline"><input id="correctchoice2"
+													type="radio" value="choice2" name="correctchoice" />2th Choice</label>
+													<label class="radio-inline"><input id="correctchoice3"
+													type="radio" value="choice3" name="correctchoice" />3th Choice</label>
+													<label class="radio-inline"><input id="correctchoice4"
+													type="radio" value="choice4" name="correctchoice" />4th Choice</label>
+													 <input
+													type="text" id="correctchoice" wicket:id="tb_CorrectChoice"
+													style="display: none;" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-3 control-label">Positive Score<span
+												class="required">*</span></label>
+											<div class="col-md-9">
+												<input id="positivescore" wicket:id="tb_PositiveScore" type="text"
+													name="positivescore" class="form-control required">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-3 control-label">Negative Score<span
+												class="required">*</span></label>
+											<div class="col-md-9">
+												<input id="negativescore" wicket:id="tb_NegativeScore" type="text"
+													name="negativescore" class="form-control required">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-3 control-label">Category</label>
+											<div class="col-md-9">
+												
+													
+														<select id="categoryname" wicket:id="tb_CategoryName" name="categoryname"
+													class="form-control required">
+													<option value=""></option>
+													<option value="1">Option 1</option>
+													<option value="2">Option 2</option>
+													<option value="3">Option 3</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default"
+											data-dismiss="modal">Close</button>
+										<input id="btnSaveChanges" wicket:id="SaveChangesbttn"
+											type="submit" class="btn btn-primary" value="Save Changes" />
+									</div>
+								</form>
+							</div>
+							<!-- /.modal-content -->
+						</div>
+						<!-- /.modal-dialog -->
+					</div>
+					<!-- /.modal -->
+
+					<!-- BEGIN THE ADD Question MODAL -->
+					<div class="modal fade" id="myModalAddQuestion">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<form wicket:id="Form_AddQuestion"
+									class="form-horizontal row-border" id="validate-1" action="#">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"
+											aria-hidden="true">&times;</button>
+										<h4 class="modal-title">Add New Question</h4>
+									</div>
+									<div class="modal-body">
+										<div class="form-group">
+											<label class="col-md-3 control-label">Question<span
+												class="required">*</span></label>
+											<div class="col-md-9">
+												<input id="questionadd" wicket:id="tb_QuestionAddText"
+													type="text" name="questionadd" class="form-control required">
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Positive Score
+												<span class="required">*</span>
+											</label>
+											<div class="col-md-9">
+													<input id="positivescoreadd" wicket:id="tb_PositiveScoreAdd"
+													type="text" name="positivescoreadd" class="form-control required"
+													>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Negative Score
+												<span class="required">*</span>
+											</label>
+											<div class="col-md-9">
+													<input id="negativescoreadd" wicket:id="tb_NegativeScoreAdd"
+													type="text" name="negativescoreadd" class="form-control required"
+													>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Category</label>
+											<div class="col-md-9">
+														<select id="categorynameAdd" wicket:id="tb_CategoryNameAdd" name="categorynameAdd"
+													class="form-control required">
+													<option value=""></option>
+													<option value="1">Option 1</option>
+													<option value="2">Option 2</option>
+													<option value="3">Option 3</option>
+												</select>
+											</div>
+										</div>
+										
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Hint
+												<span class="required">*</span>
+											</label>
+											<div class="col-md-9">
+													<input id="hintadd" wicket:id="tb_HintAdd"
+													type="text" name="hintadd" class="form-control required"
+													>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Choice 1
+												<span class="required">*</span>
+											</label>
+											<div class="col-md-9">
+													<input id="choice1_add" wicket:id="tb_Choice1Add"
+													type="text" name="choice1_add" class="form-control required"
+													>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Choice 2
+												<span class="required">*</span>
+											</label>
+											<div class="col-md-9">
+													<input id="choice2_add" wicket:id="tb_Choice2Add"
+													type="text" name="choice2_add" class="form-control required"
+													>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Choice 3
+												<span class="required">*</span>
+											</label>
+											<div class="col-md-9">
+													<input id="choice3_add" wicket:id="tb_Choice3Add"
+													type="text" name="choice3_add" class="form-control required"
+													>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Choice 4
+												<span class="required">*</span>
+											</label>
+											<div class="col-md-9">
+													<input id="choice4_add" wicket:id="tb_Choice4Add"
+													type="text" name="choice4_add" class="form-control required"
+													>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<label class="col-md-3 control-label">Correct Choice<span
+												class="required">*</span></label>
+											<div class="col-md-9">
+													<label class="radio-inline"><input id="correctchoiceadd1"
+													type="radio" value="choice1" name="usertype" class="required" checked/>1th Choice
+												</label> 
+												<label class="radio-inline"><input id="correctchoiceadd2"
+													type="radio" value="choice2" name="usertype" />2th Choice</label>
+													<label class="radio-inline"><input id="correctchoiceadd3"
+													type="radio" value="choice3" name="usertype" />3th Choice</label>
+													<label class="radio-inline"><input id="correctchoiceadd4"
+													type="radio" value="choice4" name="usertype" />4th Choice</label>
+													 <input
+													type="text" id="correctchoiceadd" wicket:id="tb_CorrectChoiceAdd"
+													style="display: none;" />
+											</div>
+										</div>
+										
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default"
+											data-dismiss="modal">Close</button>
+										<input id="btnSaveChangesAddQ"
+											wicket:id="btnSaveChangesAddQuestion" type="submit"
+											class="btn btn-primary" value="Save Changes" />
+									</div>
+								</form>
+							</div>
+							<!-- /.modal-content -->
+						</div>
+						<!-- /.modal-dialog -->
+					</div>
+					<!-- END THE ADD USER MODAL -->
+				</div>
+				<br />
+
+				<!-- /Page Content -->
+			</div>
+			<!-- /.container -->
+		</div>
+
+	</div>
+</body>
+</html>

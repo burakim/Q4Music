@@ -1,0 +1,8 @@
+applications:
+- name: q4music
+  host: q4music
+  disk: 1024M
+  path: Q4Music.war
+  domain: mybluemix.net
+  mem: 512M
+  instances: 1

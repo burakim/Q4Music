@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.oorg">
+<head>
+<wicket:head></wicket:head>
+</head>
+<body class="theme-dark">
+	<div wicket:id="panel1"></div>
+	<div id="container">
+		<div id="sidebar" class="sidebar-fixed" wicket:id="panel2"></div>
+		<div id="content">
+			<div class="container">
+				<!-- NAV�GAT�ON !!! -->
+				<!-- Breadcrumbs line -->
+				<div class="crumbs">
+					<ul id="breadcrumbs" class="breadcrumb">
+						<li><i class="icon-home"></i><a wicket:id="lnkHomePage" href="">Q4Music</a>
+						</li>
+						<li class="current"><a wicket:id="lnkProfileSettings" href="" title="">Profile Settings</a></li>
+					</ul>
+				</div>
+				<!-- /Breadcrumbs line -->
+				<!--=== Page Header ===-->
+				<div class="page-header">
+					<div class="page-title">
+						<h3>Users Profile Settings</h3>
+						<span>You can edit account or change password</span>
+					</div>
+				</div>
+				<!-- /Page Header -->
+				<!--=== Page Content ===-->
+				<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!All of your content must be in here!!!!!!!!!!!!!!!!!!!!! -->
+				<!--=== Page Content ===-->
+				<!--=== Inline Tabs ===-->
+				<div class="row">
+					<div class="col-md-12">
+						<!-- Tabs-->
+						<div class="tabbable tabbable-custom tabbable-full-width">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="#tab_edit_account" data-toggle="tab">Edit
+										Account</a></li>
+								<li><a href="#tab_change_password" data-toggle="tab">Change
+										Password</a></li>
+							</ul>
+							<div class="tab-content row">
+								<!--=== Overview ===-->
+								
+								<!-- /Overview -->
+
+								<!--=== Edit Account ===-->
+								<div class="tab-pane active" id="tab_edit_account">
+									<form wicket:id="FormUserProfile" class="form-horizontal"
+										action="#">
+										<div class="col-md-12">
+											<div class="widget">
+												<div class="widget-header">
+													<h4>General Information</h4>
+												</div>
+												<div class="widget-content">
+													<div class="row">
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="col-md-4 control-label">Full name:</label>
+																<div class="col-md-8">
+																	<input wicket:id="tbFullName" type="text"
+																		name="regular" class="form-control" value="">
+																</div>
+															</div>
+														</div>
+														<div class="col-md-6">
+															<div class="form-group">
+																<label class="col-md-4 control-label">E-Mail:</label>
+																<div class="col-md-8">
+																	<input wicket:id="tbEMail" type="text" name="regular"
+																		class="form-control" value="">
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- /.row -->
+												</div>
+												<!-- /.widget-content -->
+											</div>
+											<!-- /.widget -->
+										</div>
+										<!-- /.col-md-12 -->
+
+
+										<!-- /.col-md-12 -->
+										<div class="form-actions">
+												<input type="submit" value="Save Changes"
+													class="btn btn-primary pull-right">
+											</div>
+									</form>
+								</div>
+								<div class="tab-pane" id="tab_change_password">
+									<form wicket:id="FormChangePassword" class="form-horizontal"
+										action="#">
+										<div class="col-md-12 form-vertical no-margin">
+											<div class="widget">
+												<div class="widget-header">
+													<h4>Settings</h4>
+												</div>
+												<div class="widget-content">
+													<div class="row">
+														<div class="col-md-4 col-lg-2">
+															<strong class="subtitle padding-top-10px">Permanent
+																username</strong>
+															<p class="text-muted">You cannot change username.</p>
+														</div>
+
+														<div class="col-md-8 col-lg-10">
+															<div class="form-group">
+																<label class="control-label padding-top-10px">Username:</label>
+																<input wicket:id="tbUserName" type="text"
+																	name="username" class="form-control" value="" disabled>
+															</div>
+														</div>
+													</div>
+													<!-- /.row -->
+													<div class="row">
+														<div class="col-md-4 col-lg-2">
+															<strong class="subtitle">Change password</strong>
+															<p class="text-muted">You can change password.</p>
+														</div>
+
+														<div class="col-md-8 col-lg-10">
+															<div class="form-group">
+																<label class="control-label">Old password:</label> <input
+																	wicket:id="tbOldPassword" type="password"
+																	class="form-control"
+																	placeholder="Leave empty for no password-change">
+															</div>
+
+															<div class="form-group">
+																<label class="control-label">New password:</label> <input
+																	wicket:id="TbPassword" type="password"
+																	class="form-control"
+																	placeholder="Leave empty for no password-change">
+															</div>
+
+															<div class="form-group">
+																<label class="control-label">Repeat new
+																	password:</label> <input wicket:id="TbPasswordConfirm"
+																	type="password" class="form-control"
+																	placeholder="Leave empty for no password-change">
+															</div>
+														</div>
+													</div>
+													<!-- /.row -->
+												</div>
+												<!-- /.widget-content -->
+											</div>
+											<!-- /.widget -->
+
+											<div class="form-actions">
+												<input type="submit" value="Save Changes"
+													class="btn btn-primary pull-right">
+											</div>
+										</div>
+									</form>
+								</div>
+								<!-- /Edit Account -->
+							</div>
+							<!-- /.tab-content -->
+						</div>
+						<!--END TABS-->
+					</div>
+				</div>
+				<!-- /.row -->
+				<!-- /Page Content -->
+				<!-- /Page Content -->
+			</div>
+			<!-- /.container -->
+		</div>
+
+	</div>
+</body>
+</html>

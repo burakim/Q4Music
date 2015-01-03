@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.oorg">
+<head>
+<wicket:head></wicket:head>
+</head>
+<body class="theme-dark">
+	<div wicket:id="panel1"></div>
+	<div id="container">
+		<div id="sidebar" class="sidebar-fixed" wicket:id="panel2"></div>
+		<div id="content">
+			<div class="container">
+				<!-- NAV�GAT�ON !!! -->
+				<!-- Breadcrumbs line -->
+				<div class="crumbs">
+					<ul id="breadcrumbs" class="breadcrumb">
+						<li><i class="icon-home"></i> <a wicket:id="lnkHomePage" href="">Q4Music</a>
+						</li>
+						<li class="current"><a wicket:id="lnkUserSearchDetails" href="" title="">User Statistics</a></li>
+					</ul>
+				</div>
+				<!-- /Breadcrumbs line -->
+				<!--=== Page Header ===-->
+				<div class="page-header">
+					<div class="page-title">
+						<h3>User Details</h3>
+						<span>User details about quiz scores</span>
+					</div>
+				</div>
+				<!-- /Page Header -->
+				<!--=== Page Content ===-->
+				<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!All of your content must be in here!!!!!!!!!!!!!!!!!!!!! -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="widget box">
+							<div class="widget-header">
+								<h4>
+									<i class="icon-reader"></i>User Information
+								</h4>
+							</div>
+							<div class="widget-content">
+								<form wicket:id="formInfo" class="form-horizontal row-border">
+									<div class="form-group">
+										<label class="col-md-3 control-label">Username</label>
+										<div class="col-md-6">
+											<input disabled wicket:id="tbUsername" class="form-control"
+												type="text" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-3 control-label">Fullname</label>
+										<div class="col-md-6">
+											<input disabled wicket:id="tbFullname" class="form-control"
+												type="text" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-md-3 control-label">EMail Address</label>
+										<div class="col-md-6">
+											<input disabled wicket:id="tbEMail" class="form-control" type="text" />
+										</div>
+									</div>
+								</form>
+								<table
+									class="table table-striped table-bordered table-hover table-checkable datatable">
+									<thead>
+										<tr>
+											<th>Song Type</th>
+											<th>Total Score</th>
+											<th># True Answer</th>
+											<th># False Answer</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr wicket:id="usertablerow">
+											<td><span wicket:id="tdSongType">TEST</span></td>
+											<td><span wicket:id="tdTotalScore">TEST</span></td>
+											<td><span wicket:id="tdTrueAnswer">TEST</span></td>
+											<td><span wicket:id="tdFalseAnswer">TEST</span></td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Page Content -->
+			</div>
+			<!-- /.container -->
+		</div>
+
+	</div>
+</body>
+</html>

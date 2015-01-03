@@ -1,0 +1,64 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:panel>
+	<div id="sidebar-content">
+		<!--=== Navigation ===-->
+		<ul id="nav">
+			<li class="current"><a wicket:id="lblHomePage" href="index.html">
+					<i class="icon-home"></i>Homepage
+			</a></li>
+			<li><a wicket:id="quizbttn"> <i class="icon-question-sign"></i>
+					Quiz
+			</a></li>
+			<li><a href="index.html"> <i class="icon-dashboard"></i>
+					Archive
+			</a>
+				<ul class="sub-menu">
+					<li><a wicket:id="songsPage"> <i class="icon-music"></i>
+							Songs
+					</a></li>
+					<li><a wicket:id="singersPage"> <i class="icon-user"></i>
+							Singers
+					</a></li>
+				</ul></li>
+			<li><a href="javascript:void(0);"> <i class="icon-desktop"></i>
+					Profile
+			</a>
+				<ul class="sub-menu">
+					<li><a wicket:id="lblProfileSettings" href=""> <i
+							class="icon-wrench"></i> Profile Settings
+					</a></li>
+					<li><a wicket:id="lblMyStatistics" href="javascript:void(0);"> <i class="icon-signal"></i>
+							My Statistics
+					</a></li>
+
+				</ul></li>
+			
+			<li><a wicket:id="searchuser" href=""> <i
+					class="icon-search"></i> Search User
+			</a></li>
+			<li><a wicket:id="logoutbody" href=""> <i class="icon-key"></i>
+					Logout
+			</a></li>
+
+			<!-- 			</wicket:panel> -->
+			<!-- 			<wicket:panel wicket:id=""> -->
+
+		</ul>
+		<!-- /Navigation -->
+		<!-- TOP L�ST -->
+		<div class="sidebar-title">
+			<span style="text-align: center">TOP List</span>
+		</div>
+		<ul class="notifications demo-slide-in">
+			<!-- .demo-slide-in is just for demonstration purposes. You can remove this. -->
+			<li wicket:id="liTopList" >
+				<div wicket:id="topListPanel"></div>
+			</li>
+
+		</ul>
+
+		<!-- /TOP L�ST -->
+	</div>
+	<div id="divider" class="resizeable"></div>
+</wicket:panel>
+</html>

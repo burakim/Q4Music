@@ -1,0 +1,51 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:panel>
+	<div id="sidebar-content">
+		<!--=== Navigation ===-->
+		<ul id="nav">
+			<li class="current"><a wicket:id="lblHomePage" href="index.html">
+					<i class="icon-home"></i>Homepage
+			</a></li>
+			<li><a wicket:id="MenuUsers"> <i class="icon-user"></i>
+					Users
+			</a></li>
+			<li><a href="index.html"> <i class="icon-dashboard"></i>
+					Archive
+			</a>
+				<ul class="sub-menu">
+					<li><a wicket:id="MenuSongs"> <i class="icon-music"></i>
+							Songs
+					</a></li>
+					<li><a wicket:id="MenuSingers"> <i class="icon-microphone"></i>
+							Singers
+					</a></li>
+					<li><a wicket:id="MenuSongTypes"> <i class="icon-th-list"></i>
+							Song Types
+					</a></li>
+				</ul></li>
+			<li><a href="index.html"> <i class="icon-dashboard"></i>
+					Questions
+			</a>
+				<ul class="sub-menu">
+					<li><a wicket:id="questionPage"> <i class="icon-music"></i>
+							Questions
+					</a></li>
+					<li><a wicket:id="hintPage"> <i class="icon-user"></i>
+							Hints
+					</a></li>
+					<li><a wicket:id="choicePage"> <i class="icon-edit"></i>
+							Choices
+					</a></li>
+				</ul></li>
+			<li><a wicket:id="logoutbody" href=""> <i class="icon-edit"></i>
+					Logout
+			</a></li>
+		</ul>
+		<!-- /Navigation -->
+		<!-- TOP L�ST -->
+
+		<!-- /TOP L�ST -->
+	</div>
+	<div id="divider" class="resizeable"></div>
+</wicket:panel>
+</html>
